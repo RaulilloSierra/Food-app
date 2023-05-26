@@ -7,10 +7,9 @@ module.exports = (sequelize) => {
     "recipe",
     {
       id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         primaryKey: true,
-        allowNull: false,
-        autoIncrement: true
+        defaultValue: DataTypes.UUIDV4,
       },
       name: {
         type: DataTypes.STRING,
@@ -20,7 +19,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      food_sumary: {
+      food_summary: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -28,7 +27,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      preparation: {
+      instructions: {
         type: DataTypes.STRING,
         allowNull: false,
       },
