@@ -6,7 +6,7 @@ async function getAllRecipesDB() {
       "id",
       "name",
       "image",
-      "food_sumary",
+      "food_summary",
       "health_score",
       "instructions",
     ],
