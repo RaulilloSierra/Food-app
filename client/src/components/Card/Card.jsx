@@ -3,9 +3,9 @@ import style from "./Card.module.css";
 // import {Link} from 'react-router-dom'
 
 export default function Card(props) {
-  const { key, id, name, health_score, image } = props;
+  const {id, name, health_score, image } = props;
   return (
-    <div key={key} className={style.cardContainer}>
+    <div key={id} className={style.cardContainer}>
       <p className={style.idCard}>#{id}</p>
       <img className={style.imageCard} src={image} alt={name} />
       <h1 className={style.nameCard}>{name}</h1>
