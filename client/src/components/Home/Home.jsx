@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "../Card/Card.jsx";
-import style from "./Home.module.css";
+import "./Home.css";
 import Pagination from "../Pagination/Pagination.jsx";
 
 function Home(props) {
@@ -16,16 +16,22 @@ function Home(props) {
   console.log(lastIndex, "-", firstIndex);
 
   return (
-    <div>
-      <div className={style.home}>
-        <div className={style.filter}>
+    <div className="containerHome">
+      <Pagination
+          cardsPerPage={cardsPerPage}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          totalCards={totalCards}
+        />
+      <div className='home'>
+        <div className='filter'>
           <h1>Hola a todos</h1>
           <p>Uno</p>
           <p>Dos</p>
           <p>Tres</p>
           <p>Cuatro</p>
         </div>
-        <div className={style.containerCards}>
+        <div className='containerCards'>
           {cards
             ?.map((e) => {
               return (
@@ -35,6 +41,7 @@ function Home(props) {
                   name={e.name}
                   health_score={e.health_score}
                   image={e.image}
+                  diets={e.diets}
                 />
               );
             })

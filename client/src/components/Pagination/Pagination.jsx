@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Pagination.module.css";
+import "./Pagination.css";
 
 export default function Pagination(props) {
   const { cardsPerPage, currentPage, setCurrentPage, totalCards } = props;
@@ -23,12 +23,12 @@ export default function Pagination(props) {
   };
 
   return (
-    <div className={style.containerPag}>
-      <ul className={style.pagination}>
-        <li className={style.sectionPag}>
+    <div className='containerPag'>
+      <ul className='pagination'>
+        <li className='sectionPag'>
           <p
-            className={`${style.onPag} ${
-              currentPage === 1 ? style.disable : ""
+            className={`onPag ${
+              currentPage === 1 ? 'disable' : ""
             }`}
             onClick={onPrevPage}
           >
@@ -37,9 +37,9 @@ export default function Pagination(props) {
         </li>
         {pageNumbers.map((e) => {
           return (
-            <li className={style.sectionPag} key={e}>
+            <li className='sectionPag' key={e}>
               <p
-                className={`${e === currentPage ? style.active : style.number}`}
+                className={`${e === currentPage ? 'active' : 'number'}`}
                 onClick={() => onSpecificPage(e)}
               >
                 {e}
@@ -47,10 +47,10 @@ export default function Pagination(props) {
             </li>
           );
         })}
-        <li className={style.sectionPag}>
+        <li className='sectionPag'>
           <p
-            className={`${style.onPag} ${
-              currentPage >= pageNumbers.length ? style.disable : ""
+            className={`onPag ${
+              currentPage >= pageNumbers.length ? 'disable' : ""
             }`}
             onClick={onNextPage}
           >

@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image from "../../images/imagen landing.jpeg";
-import style from "./Landing.module.css";
+import "./Landing.css";
 
 export default function Landing() {
   return (
-    <div className={style.landing}>
+    <div className='landing'>
       <div>
-        <img src={image} alt="imagen Landing" className={style.imageLanding} />
+        <img src={image} alt="imagen Landing" className='imageLanding' />
       </div>
-      <div className={style.textLanding}>
+      <div className='textLanding'>
         <h1>THE PASSION OF COOKING</h1>
         <p>
           Cooking is an art that connects us with our flavors and traditions.
@@ -19,7 +19,7 @@ export default function Landing() {
           flavor!
         </p>
         <Link to={'/home'}>
-          <button className={style.buttonLanding}>Start now →</button>
+          <button className='buttonLanding'>Start now →</button>
         </Link>
       </div>
     </div>

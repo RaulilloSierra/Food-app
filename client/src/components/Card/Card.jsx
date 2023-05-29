@@ -1,16 +1,36 @@
 import React from "react";
-import style from "./Card.module.css";
-// import {Link} from 'react-router-dom'
+import "./Card.css";
+import { Link } from "react-router-dom";
 
 export default function Card(props) {
-  const {id, name, health_score, image } = props;
+  const { id, name, health_score, image, diets } = props;
+
+  function removerCharDiets(str) {
+    if (str === null || str === "") return false;
+    else str = str.toString();
+
+    return str.replace(/\s/g, "");
+  }
+
   return (
-    <div key={id} className={style.cardContainer}>
-      <p className={style.idCard}>#{id}</p>
-      <img className={style.imageCard} src={image} alt={name} />
-      <h1 className={style.nameCard}>{name}</h1>
-      <p className={style.healthCard}>Health score: {health_score}</p>
-      <button className={style.btnCard}>See more</button>
+    <div key={id} className="cardContainer">
+      <p className="idCard">#{id}</p>
+      <Link to={`/detail/${id}`}>
+        <img className="imageCard" src={image} alt={name} />
+      </Link>
+      <Link className="nameCard" to={`/detail/${id}`}>
+        <h1 className="nameCard">{name}</h1>
+      </Link>
+      <p className="healthCard" healthCard>
+        Health score: {health_score}
+      </p>
+      <div className="diet">
+        {diets.map((diet) => (
+          <p className={`${removerCharDiets(diet.name)}Card`}>{diet.name}</p>
+        ))}
+      </div>
     </div>
   );
 }
+
+// {`${removerCharDiets(diet.name)}Card`}

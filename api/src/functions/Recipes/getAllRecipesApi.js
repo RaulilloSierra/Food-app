@@ -8,9 +8,9 @@ const { Diet } = require("../../db");
 async function getAllRecipesApi() {
   const dietsAll = [];
   const infoApi = await axios(
-    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`
+    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&fillIngredients=true&number=100`
   );
-  
+
   const infoFinal = infoApi.data.results.map((recipe) => {
     return {
       id: recipe.id,
@@ -18,14 +18,19 @@ async function getAllRecipesApi() {
       food_summary: recipe.summary,
       health_score: recipe.healthScore,
       image: recipe.image,
-      instructions: recipe.analyzedInstructions?.map((step) =>
-        step.steps.map((step) => {
-          return {
-            number: step.number,
-            step: step.step,
-          };
-        })
-      ),
+      ingredients: recipe.extendedIngredients.map((e) => {
+        return {
+          name: e.originalName,
+          amount: e.measures.metric.amount,
+          unitShort: e.measures.metric.unitShort,
+        };
+      }),
+      instructions: recipe.analyzedInstructions[0]?.steps.map((step) => {
+        return {
+          number: step.number,
+          step: step.step,
+        };
+      }),
       diets: recipe.diets.map((d) => {
         return { name: d };
       }),

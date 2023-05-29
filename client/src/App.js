@@ -6,7 +6,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import cards from './data'
 import Landing from "./components/Landing/Landing.jsx";
 import Home from "./components/Home/Home.jsx";
-import NavBar from "./NavBar/NavBar";
+import NavBar from "./components/NavBar/NavBar.jsx";
+import Detail from "./components/Detail/Detail";
 
 function App() {
   const { pathname } = useLocation();
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home cards={cards} />} />
+        <Route path="/detail/:id" element={<Detail />} />
       </Routes>
     </div>
   );

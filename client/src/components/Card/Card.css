@@ -1,0 +1,169 @@
+.cardContainer {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-sizing: inherit;
+  color: #009432;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 27px 0px rgba(116, 125, 140, 0.49);
+  -moz-box-shadow: 0px 0px 27px 0px rgba(116, 125, 140, 0.49);
+  box-shadow: 0px 0px 27px 0px rgba(116, 125, 140, 0.49);
+  height: 500px;
+}
+
+.idCard {
+  font-size: 10px;
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.imageCard {
+  height: 148px;
+  width: 200px;
+  border-radius: 25px;
+}
+
+.nameCard {
+  font-size: 20px;
+  text-decoration: none;
+  color: #009432;
+}
+.nameCard:hover{
+  color: #ea2027;
+}
+
+.healthCard {
+  font-size: 14px;
+}
+.diet {
+  color: #fff;
+  display: flex;
+  gap: 0.3em;
+  flex-flow: row wrap;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.glutenfreeCard {
+  background-color: #ed4c67 !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ketogenicCard {
+  background-color: #ed4c67 !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lactoovovegetarianCard {
+  background-color: #2ecc71 !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.veganCard {
+  background-color: #2ecc71 !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pescatarianCard {
+  background-color: #1289a7 !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paleolithicCard {
+  background-color: #ed4c67 !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primalCard {
+  background-color: #ed4c67 !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fodmapfriendlyCard {
+  background-color: #ffc312 !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whole30Card {
+  background-color: #ffc312 !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dairyfreeCard {
+  background-color: #9980fa !important;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  padding: 6px 9px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardContainer:hover {
+  transform: scale(1.05);
+}
