@@ -77,9 +77,7 @@ export default function Detail() {
               <ul>
                 {e.ingredients.map((i) => {
                   return (
-                    <li className="ingredientsDetail">{`${i.name} (${
-                      i.amount
-                    } ${i.unitShort ? i.unitShort : "units"})`}</li>
+                    <li className="ingredientsDetail">{`${i.name} (${Math.ceil(i.amount)} ${i.unitShort ? i.unitShort : "units"})`}</li>
                   );
                 })}
               </ul>

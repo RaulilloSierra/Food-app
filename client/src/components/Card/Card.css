@@ -13,7 +13,7 @@
 .idCard {
   font-size: 10px;
   text-align: left;
-  margin-left: 50px;
+  margin-left: 5%;
   margin-bottom: 20px;
 }
 
@@ -27,6 +27,8 @@
   font-size: 20px;
   text-decoration: none;
   color: #009432;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .nameCard:hover{
   color: #ea2027;
@@ -42,6 +44,8 @@
   flex-flow: row wrap;
   font-size: 11px;
   font-weight: 700;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .glutenfreeCard {
