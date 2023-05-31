@@ -1,13 +1,14 @@
 const postDataRecipe = require("../../functions/Recipes/postDataRecipe");
 
 async function postRecipe(req, res) {
-  const { name, food_summary, health_score, instructions, image, diets } =
+  const { name, food_summary, health_score, ingredients, instructions, image, diets } =
     req.body;
   try {
     if (
       name &&
       food_summary &&
       health_score &&
+      ingredients &&
       instructions &&
       image &&
       diets
@@ -16,6 +17,7 @@ async function postRecipe(req, res) {
         name,
         food_summary,
         health_score,
+        ingredients,
         instructions,
         image,
         diets,

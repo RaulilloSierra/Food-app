@@ -5,10 +5,12 @@ async function getAllRecipesDB() {
     attributes: [
       "id",
       "name",
-      "image",
       "food_summary",
       "health_score",
+      "ingredients",
       "instructions",
+      "image",
+      "createDb",
     ],
     include: { model: Diet },
   });
@@ -16,14 +18,16 @@ async function getAllRecipesDB() {
   return await res.map((e) => {
     return {
       id: e.dataValues.id,
-      name: data.dataValues.name,
-      image: data.dataValues.image,
-      food_summary: data.dataValues.food_summary,
-      health_score: data.dataValues.health_score,
-      instructions: data.dataValues.preparation,
+      name: e.dataValues.name,
+      image: e.dataValues.image,
+      food_summary: e.dataValues.food_summary,
+      health_score: e.dataValues.health_score,
+      ingredients: e.dataValues.ingredients,
+      instructions: e.dataValues.preparation,
       diets: e.dataValues.diets.map((d) => {
         return { name: d.name };
       }),
+      createDb: e.dataValues.createDb,
     };
   });
 }

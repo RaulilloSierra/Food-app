@@ -20,9 +20,10 @@
     border: none;
     background-color: transparent;
     font-size: 30px;
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .navButton:hover{

@@ -27,9 +27,17 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      instructions: {
-        type: DataTypes.STRING,
+      ingredients: {
+        type: DataTypes.ARRAY(DataTypes.JSONB),
         allowNull: false,
+      },
+      instructions: {
+        type: DataTypes.ARRAY(DataTypes.JSONB),
+        allowNull: false,
+      },
+      createDb: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
       },
     },
     {

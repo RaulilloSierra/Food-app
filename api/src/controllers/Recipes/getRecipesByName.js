@@ -2,7 +2,6 @@ const getAllRecipes = require("../../functions/Recipes/getAllRecipes");
 
 async function getRecipesByName(req, res) {
   const { name } = req.query;
-  console.log(name);
   try {
     const allRecipes = await getAllRecipes();
     if (name) {

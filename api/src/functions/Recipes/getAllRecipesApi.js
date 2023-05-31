@@ -34,6 +34,7 @@ async function getAllRecipesApi() {
       diets: recipe.diets.map((d) => {
         return { name: d };
       }),
+      createDb: false,
     };
   });
 

@@ -1,16 +1,16 @@
 let { Recipe, Diet } = require("../../db");
 
 async function postDataRecipe(recipe) {
-  const { name, food_summary, health_score, instructions, image, diets } =
+  const { name, food_summary, health_score, ingredients, instructions, image, diets } =
     recipe;
 
   const saveRecipe = await Recipe.create({
     name,
     food_summary,
     health_score,
+    ingredients,
     instructions,
     image,
-    diets,
   });
 
   let dietsBd = await Diet.findAll({

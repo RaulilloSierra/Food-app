@@ -1,0 +1,195 @@
+.create {
+  text-align: justify;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #2f3640;
+  padding: 30px 13%;
+  background-color: #ffffff;
+}
+.btnCreate {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #ea2027;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btnCreate:hover {
+  transform: scale(1.05);
+}
+
+.titleCreate {
+  color: #009432;
+  font-size: 60px;
+  text-align: center;
+}
+
+.stepsCreate {
+  font-size: 20px;
+}
+
+.formCreate {
+  padding: 2%;
+  border: 1px solid #009432;
+  border-radius: 20px;
+}
+
+.titleFormCreate {
+  color: #009432;
+  font-size: 30px;
+}
+
+.labelFormCreate {
+  font-size: 20px;
+  margin-bottom: 100px;
+  font-weight: bold;
+}
+
+.inputCreate {
+  background-color: #e0e0e0;
+  color: #2f3640;
+  font-family: "Raleway", sans-serif;
+  height: 30px;
+  width: 70%;
+  font-size: 20px;
+  border: none;
+  outline: 0px;
+}
+
+.textAreaCreate {
+  background-color: #e0e0e0;
+  color: #2f3640;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  width: 70%;
+  height: 150px;
+  border: none;
+  outline: 0px;
+}
+
+.labelIngredient {
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.nameIngredient {
+  background-color: #e0e0e0;
+  color: #2f3640;
+  font-family: "Raleway", sans-serif;
+  height: 28px;
+  width: 20%;
+  font-size: 20px;
+  border: none;
+  outline: 0px;
+  margin-right: 15px;
+}
+
+.amountIngredient {
+  background-color: #e0e0e0;
+  color: #2f3640;
+  font-family: "Raleway", sans-serif;
+  height: 28px;
+  width: 10%;
+  font-size: 20px;
+  border: none;
+  outline: 0px;
+  margin-right: 15px;
+}
+
+.unitIngredient {
+  background-color: #e0e0e0;
+  color: #2f3640;
+  font-family: "Raleway", sans-serif;
+  height: 28px;
+  width: 10%;
+  font-size: 20px;
+  border: none;
+  outline: 0px;
+  margin-right: 15px;
+}
+
+.btnAdd {
+  margin: 20px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #009432;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btnAdd:hover {
+  transform: scale(1.05);
+  background-color: #009432;
+  color: #ffffff;
+}
+
+.btnClear {
+  margin: 20px;
+  border: none;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #ea2027;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+.btnClear:hover {
+  transform: scale(1.05);
+  background-color: #ea2027;
+  color: #ffffff;
+}
+
+.dietCreate {
+  margin-left: 26px;
+}
+
+.danger {
+  color: red;
+}
+
+.warningInputCreate {
+  background-color: #e0e0e0;
+  color: #2f3640;
+  font-family: "Raleway", sans-serif;
+  height: 30px;
+  width: 70%;
+  font-size: 20px;
+  border: 1px solid red;
+  outline: 0px;
+}
+
+.warningTextAreaCreate {
+  background-color: #e0e0e0;
+  color: #2f3640;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  width: 70%;
+  height: 150px;
+  border: 1px solid red;
+  outline: 0px;
+}
+
+.btnSubmitCreate {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #ea2027;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
