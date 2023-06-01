@@ -1,4 +1,11 @@
-import { GET_RECIPES, ADD_RECIPE, GET_DIETS } from "./actions.type";
+import {
+  GET_RECIPES,
+  ADD_RECIPE,
+  GET_DIETS,
+  FILTER_BY_DIET,
+  FILTER_BY_ORIGIN,
+  ORDER_BY,
+} from "./actions.type";
 import axios from "axios";
 
 export const addRecipe = (recipe) => {
@@ -45,3 +52,23 @@ export const getRecipes = () => {
     }
   };
 };
+export const orderBy = (order) => {
+  return {
+    type: ORDER_BY,
+    payload: order,
+  };
+};
+
+export const filterByDiet = (diets) => {
+  return {
+    type: FILTER_BY_DIET,
+    payload: diets,
+  };
+};
+
+export const filterbyOrigin = (origin)=>{
+  return{
+    type: FILTER_BY_ORIGIN,
+    payload: origin
+  }
+}

@@ -1,0 +1,18 @@
+.filter {
+  text-align: left;
+  background-color: #ffffff;
+  padding: 10px;
+  color: #2f3640;
+}
+
+.titleFilter {
+    font-size: 18px;
+}
+
+.subtitleFilter{
+    font-size: 14px;
+}
+
+.filterDiet{
+    font-size: 12px;
+}

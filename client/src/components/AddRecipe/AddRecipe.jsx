@@ -6,25 +6,10 @@ import addRecipeValidation from "./AddRecipeValidation";
 import "./AddRecipe.css";
 
 export default function AddRecipe() {
-  const UnitIng = [
-    "unit",
-    "ml",
-    "l",
-    "gr",
-    "kg",
-    "lb",
-    "Tpsp",
-    "tsp",
-    "cup",
-    "jar",
-    "oz",
-    "taste",
-  ];
-
+  
   const formRef = useRef(null);
   const dispatch = useDispatch();
   const allDiets = useSelector((state) => state.typeDiets);
-
   const [errors, setErrors] = useState({});
   const [nameIngredient, setNameIngredient] = useState("");
   const [amountIngredient, setAmountIngredient] = useState("");

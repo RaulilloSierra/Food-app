@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Card from "../Card/Card.jsx";
 import "./Home.css";
 import Pagination from "../Pagination/Pagination.jsx";
+import Filter from "../Filters/Filter.jsx";
+import Order from "../Order/Order.jsx";
 
 function Home(props) {
   const { cards } = props;
@@ -13,25 +15,34 @@ function Home(props) {
   const lastIndex = currentPage * cardsPerPage;
   const firstIndex = lastIndex - cardsPerPage;
 
-  console.log(lastIndex, "-", firstIndex);
-
   return (
     <div className="containerHome">
       <Pagination
-          cardsPerPage={cardsPerPage}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          totalCards={totalCards}
-        />
-      <div className='home'>
-        <div className='filter'>
-          <h1>Hola a todos</h1>
-          <p>Uno</p>
-          <p>Dos</p>
-          <p>Tres</p>
-          <p>Cuatro</p>
-        </div>
-        <div className='containerCards'>
+        cardsPerPage={cardsPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalCards={totalCards}
+      />
+      <Order />
+      {/* <select id="orderByName" onChange={(e) => handleOrderbyName(e)}>
+          <option>Order by name</option>
+          <option value="asc">alphabetical order, a-z</option>
+          <option value="des">alphabetical order, z-a</option>
+        </select> */}
+      <div className="home">
+        <Filter />
+        
+        {/* <select onChange={handleFilterByDiet} name="diet" id="diet">
+          <option value="All" defaultValue>
+            All
+          </option>
+          {diet.map((el) => (
+            <option value={el.name} key={el.id}>
+              {el.name}
+            </option>
+          ))}
+        </select> */}
+        <div className="containerCards">
           {cards
             ?.map((e) => {
               return (
@@ -48,12 +59,12 @@ function Home(props) {
             .slice(firstIndex, lastIndex)}
         </div>
       </div>
-        <Pagination
-          cardsPerPage={cardsPerPage}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          totalCards={totalCards}
-        />
+      <Pagination
+        cardsPerPage={cardsPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalCards={totalCards}
+      />
     </div>
   );
 }

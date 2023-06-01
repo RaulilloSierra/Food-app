@@ -1,31 +1,16 @@
-.containerHome{
+.containerHome {
   margin-top: 30px;
 }
 
 .home {
-    display: grid;
-    grid-template-columns: 10% 90%;
-    gap: 2rem;
-    padding: 3%;
-    margin-right: 2%;
-  }
-  .containerCards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
-  
-  .filter {
-    text-align: left;
-    background-color: #f1f2f6;
-    padding: 15px;
-  }
-  
-  .filter h1 {
-    font-size: 14px;
-  }
-  
-  .filter p {
-    font-size: 12px;
-  }
-  
+  display: grid;
+  grid-template-columns: 12% 88%;
+  gap: 2rem;
+  padding: 3%;
+  margin-right: 2%;
+}
+.containerCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
