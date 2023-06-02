@@ -21,9 +21,7 @@ export default function Card(props) {
       <Link className="nameCard" to={`/detail/${id}`}>
         <h1 className="nameCard">{name}</h1>
       </Link>
-      <p className="healthCard" healthCard>
-        Health score: {health_score}
-      </p>
+      <p className="healthCard">Health score: {health_score}</p>
       <div className="diet">
         {diets.map((diet) => (
           <p className={`${removerCharDiets(diet.name)}Card`}>{diet.name}</p>

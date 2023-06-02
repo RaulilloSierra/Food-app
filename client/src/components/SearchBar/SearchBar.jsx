@@ -13,13 +13,16 @@ export default function SearchBar() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    dispatch(actions.awaitBy());
     dispatch(actions.searchByName(name));
   }
 
   return (
     <div className="searchBar">
-      <input className="inputSearch" type="search" onChange={handleChange}/>
-      <button className="btnSearch" onClick={handleSubmit}>Search</button>
+      <input className="inputSearch" type="search" onChange={handleChange} />
+      <button className="btnSearch" onClick={handleSubmit}>
+        Search
+      </button>
     </div>
   );
 }

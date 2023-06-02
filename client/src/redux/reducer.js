@@ -7,6 +7,8 @@ import {
   FILTER_BY_ORIGIN,
   NAME_SUCCESS,
   NAME_FAILURE,
+  AWAIT_BY,
+  GET_RECIPES_BY_ID,
 } from "./actions.type";
 
 const initialState = {
@@ -14,6 +16,8 @@ const initialState = {
   allRecipes: [],
   typeDiets: [],
   error: "",
+  loading: true,
+  detail: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -36,6 +40,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         recipes: action.payload,
         allRecipes: action.payload,
+        loading: false,
       };
 
     case FILTER_BY_DIET:
@@ -86,11 +91,24 @@ const rootReducer = (state = initialState, action) => {
         recipes: orderRecipe,
       };
 
+    case AWAIT_BY:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case GET_RECIPES_BY_ID:
+      return {
+        ...state,
+        detail: action.payload,
+      };
+
     case NAME_SUCCESS:
       return {
         ...state,
         recipes: action.payload,
         error: "",
+        loading: false,
       };
 
     case NAME_FAILURE:
@@ -98,6 +116,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         recipes: [],
         error: action.payload,
+        loading: false,
       };
 
     default:

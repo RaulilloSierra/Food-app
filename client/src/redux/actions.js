@@ -5,8 +5,10 @@ import {
   FILTER_BY_DIET,
   FILTER_BY_ORIGIN,
   ORDER_BY,
+  AWAIT_BY,
   NAME_SUCCESS,
   NAME_FAILURE,
+  GET_RECIPES_BY_ID,
 } from "./actions.type";
 import axios from "axios";
 
@@ -75,6 +77,27 @@ export const filterbyOrigin = (origin) => {
     payload: origin,
   };
 };
+
+export const awaitBy = ()=>{
+  return{
+    type: AWAIT_BY
+  }
+}
+
+export const getRecipesByiD = (id)=>{
+  const endpoint = `http://localhost:3001/recipes/${id}`;
+  return async (dispatch) => {
+    try {
+      const { data } = await axios(endpoint);
+      return dispatch({
+        type: GET_RECIPES_BY_ID,
+        payload: data,
+      });
+    } catch (error) {
+      return({error: `There is no recipe with this id: "${id}"`});
+    }
+  };
+}
 
 export const searchByName = (name) => {
   return async (dispatch) => {

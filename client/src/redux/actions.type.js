@@ -6,3 +6,5 @@ export const FILTER_BY_ORIGIN = "FILTER_BY_ORIGIN";
 export const ORDER_BY = "ORDER_BY";
 export const NAME_SUCCESS = "NAME_SUCCESS";
 export const NAME_FAILURE = "NAME_FAILURE";
+export const AWAIT_BY = "AWAIT_BY";
+export const GET_RECIPES_BY_ID = "GET_RECIPES_BY_ID";
