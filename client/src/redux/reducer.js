@@ -5,12 +5,15 @@ import {
   ORDER_BY,
   FILTER_BY_DIET,
   FILTER_BY_ORIGIN,
+  NAME_SUCCESS,
+  NAME_FAILURE,
 } from "./actions.type";
 
 const initialState = {
   recipes: [],
   allRecipes: [],
   typeDiets: [],
+  error: "",
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -78,10 +81,23 @@ const rootReducer = (state = initialState, action) => {
       if (action.payload === "hdes") {
         orderRecipe.sort((a, b) => b.health_score - a.health_score);
       }
-
       return {
         ...state,
         recipes: orderRecipe,
+      };
+
+    case NAME_SUCCESS:
+      return {
+        ...state,
+        recipes: action.payload,
+        error: "",
+      };
+
+    case NAME_FAILURE:
+      return {
+        ...state,
+        recipes: [],
+        error: action.payload,
       };
 
     default:

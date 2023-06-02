@@ -6,7 +6,7 @@ import Filter from "../Filters/Filter.jsx";
 import Order from "../Order/Order.jsx";
 
 function Home(props) {
-  const { cards } = props;
+  const { cards, error } = props;
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 9;
 
@@ -24,27 +24,11 @@ function Home(props) {
         totalCards={totalCards}
       />
       <Order />
-      {/* <select id="orderByName" onChange={(e) => handleOrderbyName(e)}>
-          <option>Order by name</option>
-          <option value="asc">alphabetical order, a-z</option>
-          <option value="des">alphabetical order, z-a</option>
-        </select> */}
+      {error !== '' && <p className="errorHome">{error}</p>}
       <div className="home">
         <Filter />
-        
-        {/* <select onChange={handleFilterByDiet} name="diet" id="diet">
-          <option value="All" defaultValue>
-            All
-          </option>
-          {diet.map((el) => (
-            <option value={el.name} key={el.id}>
-              {el.name}
-            </option>
-          ))}
-        </select> */}
         <div className="containerCards">
-          {cards
-            ?.map((e) => {
+          {cards.length >= 1 && cards?.map((e) => {
               return (
                 <Card
                   key={e.id}
@@ -57,7 +41,9 @@ function Home(props) {
               );
             })
             .slice(firstIndex, lastIndex)}
+          
         </div>
+        
       </div>
       <Pagination
         cardsPerPage={cardsPerPage}

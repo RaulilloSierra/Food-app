@@ -5,6 +5,8 @@ import {
   FILTER_BY_DIET,
   FILTER_BY_ORIGIN,
   ORDER_BY,
+  NAME_SUCCESS,
+  NAME_FAILURE,
 } from "./actions.type";
 import axios from "axios";
 
@@ -52,6 +54,7 @@ export const getRecipes = () => {
     }
   };
 };
+
 export const orderBy = (order) => {
   return {
     type: ORDER_BY,
@@ -66,9 +69,34 @@ export const filterByDiet = (diets) => {
   };
 };
 
-export const filterbyOrigin = (origin)=>{
-  return{
+export const filterbyOrigin = (origin) => {
+  return {
     type: FILTER_BY_ORIGIN,
-    payload: origin
-  }
-}
+    payload: origin,
+  };
+};
+
+export const searchByName = (name) => {
+  return async (dispatch) => {
+    const endpoint = `http://localhost:3001/recipes?name=${name}`;
+    try {
+      const { data } = await axios(endpoint);
+      dispatch(nameSuccess(data));
+    } catch (error) {
+      dispatch(nameFailure(`No recipe found with the name "${name}"`));
+    }
+  };
+};
+
+export const nameSuccess = (name) => {
+  return {
+    type: NAME_SUCCESS,
+    payload: name,
+  };
+};
+export const nameFailure = (error) => {
+  return {
+    type: NAME_FAILURE,
+    payload: error,
+  };
+};
