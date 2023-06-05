@@ -5,6 +5,7 @@
     display: inline-block;
     padding: 0;
     margin: 0;
+    
   }
   
   .sectionPag {
@@ -12,15 +13,16 @@
   }
   
   .number{
-      color: #009432;
+      color: rgba(44, 62, 80,1.0);
       float: left;
       padding: 8px 16px;
       text-decoration: none;
       cursor: pointer;
+      background-color: #a4b0be;
   }
   
   .active{
-      background: #009432;
+      background: rgba(44, 62, 80,1.0);
       color: white;
       float: left;
       padding: 8px 16px;
@@ -36,11 +38,13 @@
   }
   
   .onPag{
-      color: #009432;
+      color: rgba(44, 62, 80,1.0);
       float: left;
       padding: 8px 16px;
       text-decoration: none;
       cursor: pointer;
+      
+      background-color: #a4b0be;
   }
   
   .sectionPag p:hover:not(.active){

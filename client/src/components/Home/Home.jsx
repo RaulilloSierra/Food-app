@@ -62,7 +62,8 @@ function Home(props) {
         <div className="home">
           <Filter />
           <div className="containerCards">
-            {cards.length >= 1 &&
+            {
+            cards.length >= 1 &&
               cards
                 ?.map((e) => {
                   return (

@@ -14,21 +14,21 @@ import cards from "./data";
 function App() {
   const { pathname } = useLocation();
 
-  const error = true
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
-  // const dispatch = useDispatch();
-  // const cards = useSelector((state) => state.recipes);
-  // const error = useSelector((state) => state.error);
-  // const loading = useSelector((state) => state.loading);
-
+  // const error = true
+  // const [loading, setLoading] = useState(true)
   // useEffect(() => {
-  //   dispatch(actions.getRecipes());
-  // }, [dispatch]);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
+  const dispatch = useDispatch();
+  const cards = useSelector((state) => state.recipes);
+  const error = useSelector((state) => state.error);
+  const loading = useSelector((state) => state.loading);
+
+  useEffect(() => {
+    dispatch(actions.getRecipes());
+  }, [dispatch]);
 
   return (
     <div className="App">

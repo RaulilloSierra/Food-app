@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image from "../../images/imagen landing.jpeg";
+import image from "../../images/logo2.png";
 import "./Landing.css";
 
 export default function Landing() {

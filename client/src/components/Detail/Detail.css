@@ -2,7 +2,7 @@
   text-align: left;
   margin-left: 5%;
   margin-right: 5%;
-  color: #009432;
+  color: rgba(44, 62, 80, 1);
   background-color: white;
   padding: 30px 15%;
 }
@@ -26,7 +26,13 @@
 }
 
 .nameDetail {
-  font-size: 60px;
+  font-size: 36px;
+}
+
+@media (min-width: 720px) {
+  .nameDetail {
+    font-size: 60px;
+  }
 }
 
 .idDetails {
@@ -35,103 +41,93 @@
 
 .imgAndDietDetail {
   display: grid;
-  grid-template-columns: 70% 30%;
+}
+
+@media (min-width: 720px) {
+  .imgAndDietDetail {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
 }
 
 .imgDetail {
-  width: 500px;
-  height: 370px;
   border-radius: 20px;
+  width: 200px;
+  height: 148px;
+}
+
+@media (min-width: 720px) {
+  .imgDetail {
+    width: 500px;
+    height: 370px;
+    border-radius: 20px;
+  }
+}
+
+.generalDiet{
+  font-weight: 700;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .generalDiet{
+    font-weight: 700;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+  }
 }
 
 .glutenfreeDetail {
   background-color: #ed4c67;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .ketogenicDetail {
   background-color: #ed4c67;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .lactoovovegetarianDetail {
   background-color: #2ecc71;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .veganDetail {
   background-color: #2ecc71;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .pescatarianDetail {
   background-color: #1289a7;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .paleolithicDetail {
   background-color: #ed4c67;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .primalDetail {
   background-color: #ed4c67;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .fodmapfriendlyDetail {
   background-color: #ffc312;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .whole30Detail {
   background-color: #ffc312;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .dairyfreeDetail {
   background-color: #9980fa;
   color: #ffffff;
-  font-weight: 700;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
 }
 
 .summaryDetail {
@@ -151,7 +147,7 @@ h2 {
 
 .instructionNumber {
   font-size: 30px;
-  color: #009432;
+  color: rgba(44, 62, 80, 1);
 }
 
 .instructionDetail {

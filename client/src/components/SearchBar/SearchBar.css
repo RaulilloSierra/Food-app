@@ -7,8 +7,8 @@
     background: none;
     border: none;
     width: 300px;
-    border-bottom: 1px solid #009432;
-    color: #009432;
+    border-bottom: 1px solid rgba(44, 62, 80,1.0);
+    color: rgba(44, 62, 80,1.0);
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     outline: 0px;
@@ -16,7 +16,7 @@
 }
 
 .inputSearch:hover{
-    border-bottom: 3px solid #009432;
+    border-bottom: 3px solid rgba(44, 62, 80,1.0);
 }
 
 .btnSearch{

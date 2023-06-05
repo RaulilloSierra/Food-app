@@ -1,22 +1,46 @@
-.navBar{
-    background-color: #ffffff;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.navBar {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
-.contentNavBar{
-    background-color: #ffffff;
-    display: flex;
+
+@media (min-width: 1366px) {
+  .navBar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contentNavBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@media (min-width: 1366px) {
+  .contentNavBar {
+    flex-direction: row;
     justify-content: space-between;
     text-align: center;
+  }
 }
 
-.logoNav{
-    width: 150px;
-    height: 150px;
+.logoNav {
+  width: 150px;
+  height: 150px;
 }
 
-.navButton{
-    color: #009432;
+.navButton {
+  color: rgba(44, 62, 80, 1);
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (min-width: 1366px) {
+  .navButton {
+    color: rgba(44, 62, 80, 1);
     border: none;
     background-color: transparent;
     font-size: 30px;
@@ -24,8 +48,9 @@
     padding: 5px;
     cursor: pointer;
     text-decoration: none;
+  }
 }
 
-.navButton:hover{
-    color: #EA2027;
+.navButton:hover {
+  color: #ea2027;
 }
