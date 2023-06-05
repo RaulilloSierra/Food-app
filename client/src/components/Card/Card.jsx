@@ -30,5 +30,3 @@ export default function Card(props) {
     </div>
   );
 }
-
-// {`${removerCharDiets(diet.name)}Card`}
