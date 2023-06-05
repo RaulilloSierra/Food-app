@@ -1,0 +1,60 @@
+.error {
+  color: rgba(44, 62, 80, 1);
+}
+
+.textError {
+  background-color: #ffffff;
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 2%;
+  padding: 2%;
+}
+
+.nameError {
+  font-size: 60px;
+  margin: 0px;
+}
+
+.descError {
+  font-size: 16px;
+  margin: 0px;
+}
+
+@media (min-width: 720px) {
+  .nameError {
+    font-size: 200px;
+    margin: 0px;
+  }
+
+  .descError {
+    font-size: 30px;
+    margin: 0px;
+  }
+}
+
+.btnError {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #ea2027;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btnError:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 720px) {
+  .btnError {
+    font-size: 28px;
+    width: 300px;
+  }
+}

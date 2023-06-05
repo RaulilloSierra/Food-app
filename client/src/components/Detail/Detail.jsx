@@ -10,7 +10,7 @@ export default function Detail() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(actions.getRecipesByiD(id));
-  });
+  }, [dispatch]);
 
   let recipeDetail = useSelector((state) => state.detail);
 
@@ -48,7 +48,7 @@ export default function Detail() {
             {recipeDetail.diets &&
               recipeDetail.diets.map((i) => {
                 return (
-                  <p className={`${removerCharDiets(i.name)}Detail`}>
+                  <p className={`${removerCharDiets(i.name)}Detail generalDiet`}>
                     {i.name}
                   </p>
                 );

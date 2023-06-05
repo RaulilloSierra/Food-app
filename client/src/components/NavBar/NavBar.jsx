@@ -9,7 +9,7 @@ export default function NavBar() {
     <div className="navBar">
       <div className="contentNavBar">
         <Link to="/home"><img className="logoNav" src={logo} alt="logo" /></Link>
-        <p className="navButton">About</p>
+        <Link to="/about" className="navButton"><p className="navButton">About</p></Link>
         <Link className="navButton" to="/createrecipe">
           <p className="navButton">Create Your Recipe</p>
         </Link>

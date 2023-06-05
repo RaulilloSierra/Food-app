@@ -9,6 +9,8 @@ import Home from "./components/Home/Home.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Detail from "./components/Detail/Detail";
 import AddRecipe from "./components/AddRecipe/AddRecipe";
+import About from "./components/About/About";
+import Error from "./components/Error/Error";
 
 function App() {
   const { pathname } = useLocation();
@@ -32,6 +34,8 @@ function App() {
         />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/createrecipe" element={<AddRecipe />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error />}/>
       </Routes>
     </div>
   );

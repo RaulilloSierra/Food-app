@@ -1,0 +1,46 @@
+.about {
+  text-align: justify;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: rgba(44, 62, 80, 1);
+  padding: 30px 13%;
+  background-color: #ffffff;
+  text-align: justify;
+}
+
+.btnAbout {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #ea2027;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.titleAbout {
+  text-align: left;
+  font-size: 36px;
+}
+
+.imgAbout {
+  height: 200px;
+  width: 200px;
+}
+
+@media (min-width: 720px) {
+  .imgAbout {
+    height: 500px;
+    width: 500px;
+  }
+}
+
+.textAbout {
+  font-size: 20px;
+}
+
+
