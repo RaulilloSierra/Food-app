@@ -66,7 +66,6 @@ export default function AddRecipe() {
       recipe.food_summary &&
       recipe.health_score &&
       recipe.image &&
-      recipe.diets.length &&
       recipe.ingredients.length &&
       recipe.instructions.length &&
       !Object.keys(errors).length
