@@ -57,7 +57,6 @@ export default function AddRecipe() {
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
 
     setErrors(addRecipeValidation(recipe));
 

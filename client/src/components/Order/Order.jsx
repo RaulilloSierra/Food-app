@@ -15,8 +15,8 @@ export default function Order() {
         <option defaultValue>Select...</option>
         <option value="asc">Name ↑</option>
         <option value="des">Name ↓</option>
-        <option value="hasc">Number ↑</option>
-        <option value="hdes">Number ↓</option>
+        <option value="hasc">Health Score ↑</option>
+        <option value="hdes">Health Score ↓</option>
       </select>
     </div>
   );
