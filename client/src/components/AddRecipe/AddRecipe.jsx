@@ -6,7 +6,6 @@ import addRecipeValidation from "./AddRecipeValidation";
 import "./AddRecipe.css";
 
 export default function AddRecipe() {
-  
   const formRef = useRef(null);
   const dispatch = useDispatch();
   const allDiets = useSelector((state) => state.typeDiets);
@@ -57,7 +56,7 @@ export default function AddRecipe() {
   }
 
   function handleSubmit(e) {
-
+    e.preventDefault();
     setErrors(addRecipeValidation(recipe));
 
     if (
@@ -196,7 +195,7 @@ export default function AddRecipe() {
             </label>
             <br />
             <input
-              className={errors.name ? 'warningInputCreate' : "inputCreate"}
+              className={errors.name ? "warningInputCreate" : "inputCreate"}
               type="text"
               value={recipe.name}
               name="name"
@@ -212,7 +211,9 @@ export default function AddRecipe() {
             </label>
             <br />
             <textarea
-              className={errors.food_summary ? 'warningTextAreaCreate' : "textAreaCreate"}
+              className={
+                errors.food_summary ? "warningTextAreaCreate" : "textAreaCreate"
+              }
               type="text"
               value={recipe.food_summary}
               name="food_summary"
@@ -288,8 +289,12 @@ export default function AddRecipe() {
               <option>to taste</option>
             </select>
             <div>
-              <button className="btnAdd" onClick={handleIngredient}>Add</button>
-              <button className="btnClear" onClick={handleDeleteIngredient}>Clean</button>
+              <button className="btnAdd" onClick={handleIngredient}>
+                Add
+              </button>
+              <button className="btnClear" onClick={handleDeleteIngredient}>
+                Clean
+              </button>
             </div>
             <br />
             <div>
@@ -319,8 +324,12 @@ export default function AddRecipe() {
               onChange={handleChangeInstructionStep}
             />
             <div>
-              <button className="btnAdd" onClick={handleStep}>Add</button>
-              <button className="btnClear" onClick={handleDeleteStep}>Clean</button>
+              <button className="btnAdd" onClick={handleStep}>
+                Add
+              </button>
+              <button className="btnClear" onClick={handleDeleteStep}>
+                Clean
+              </button>
             </div>
             <ul>
               {recipe.instructions.map((e, index) => {
@@ -339,7 +348,7 @@ export default function AddRecipe() {
             </label>
             <br />
             <input
-              className={errors.image ? 'warningInputCreate' : "inputCreate"}
+              className={errors.image ? "warningInputCreate" : "inputCreate"}
               type="url"
               value={recipe.image}
               name="image"
@@ -371,7 +380,9 @@ export default function AddRecipe() {
             })}
           </div>
           <br />
-          <button className="btnSubmitCreate" type="submit">Create Recipe</button>
+          <button className="btnSubmitCreate" type="submit">
+            Create Recipe
+          </button>
         </form>
       </div>
     </div>
