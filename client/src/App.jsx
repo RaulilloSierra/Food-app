@@ -35,7 +35,7 @@ function App() {
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/createrecipe" element={<AddRecipe />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error />}/>
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
