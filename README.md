@@ -231,8 +231,6 @@ Este formulario debe ser **controlado completamente con JavaScritp**. No se pued
 
 <br />
 
----
-
 <br />
 
 ### **🖱 TESTING**
