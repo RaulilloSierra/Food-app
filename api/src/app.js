@@ -26,6 +26,11 @@ server.use((req, res, next) => {
   next();
 });
 
+// Mensaje por defecto cuando se ingresa directamente
+server.use("/", (req, res) =>
+  res.status(200).json({ msg: "API Funcionando correctamente" })
+);
+
 server.use("/recipes", routerRecipe);
 server.use("/diets", routerDiets);
 
