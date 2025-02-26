@@ -12,7 +12,7 @@ import {
 } from "./actions.type";
 import axios from "axios";
 
-const host = "http://localhost:3001";
+const { VITE_API_URL: host } = import.meta.env
 
 export const addRecipe = (recipe) => {
   const endpoint = `${host}/recipes`;

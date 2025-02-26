@@ -9,7 +9,7 @@
   margin: 2%;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .home {
     grid-template-columns: 12% 88%;
   }
