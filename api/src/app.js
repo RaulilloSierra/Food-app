@@ -26,13 +26,13 @@ server.use((req, res, next) => {
   next();
 });
 
+server.use("/recipes", routerRecipe);
+server.use("/diets", routerDiets);
+
 // Mensaje por defecto cuando se ingresa directamente
 server.use("/", (req, res) =>
   res.status(200).json({ msg: "API Funcionando correctamente" })
 );
-
-server.use("/recipes", routerRecipe);
-server.use("/diets", routerDiets);
 
 // Error catching endware.
 server.use((err, req, res, next) => {

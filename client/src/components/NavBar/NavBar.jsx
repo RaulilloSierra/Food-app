@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../../images/logo2.png";
 import "./NavBar.css";
 import SearchBar from "../SearchBar/SearchBar";

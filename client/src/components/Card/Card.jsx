@@ -1,4 +1,3 @@
-import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
@@ -24,7 +23,7 @@ export default function Card(props) {
       <p className="healthCard">Health score: {health_score}</p>
       <div className="diet">
         {diets.map((diet) => (
-          <p className={`${removerCharDiets(diet.name)}Card`}>{diet.name}</p>
+          <p key={diet.name} className={`${removerCharDiets(diet.name)}Card`}>{diet.name}</p>
         ))}
       </div>
     </div>

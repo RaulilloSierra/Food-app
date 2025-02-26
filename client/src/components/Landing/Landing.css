@@ -28,7 +28,7 @@ body {
   display: grid;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .landing {
     color: rgba(44, 62, 80, 1);
     grid-template-columns: 50% 50%;

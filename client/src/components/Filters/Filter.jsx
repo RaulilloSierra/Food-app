@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "../../redux/actions";
 
@@ -7,6 +7,7 @@ import "./Filter.css";
 export default function Filter() {
   const dispatch = useDispatch();
   const diet = useSelector((state) => state.typeDiets);
+  console.log('Dietas', diet)
 
   useEffect(() => {
     dispatch(actions.getDiets());
@@ -35,7 +36,7 @@ export default function Filter() {
         </div>
 
         {diet.map((el) => (
-          <div>
+          <div key={el.id}>
             <label>
               <input
                 type="radio"

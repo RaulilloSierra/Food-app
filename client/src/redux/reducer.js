@@ -43,7 +43,7 @@ const rootReducer = (state = initialState, action) => {
         loading: false,
       };
 
-    case FILTER_BY_DIET:
+    case FILTER_BY_DIET: {
       const allRecipes = state.allRecipes;
       const dietFilter =
         action.payload === "All"
@@ -55,8 +55,9 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         recipes: dietFilter,
       };
+    }
 
-    case FILTER_BY_ORIGIN:
+    case FILTER_BY_ORIGIN: {
       let recipesFilter = [];
       if (action.payload === "All") {
         recipesFilter = state.allRecipes;
@@ -71,8 +72,8 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         recipes: recipesFilter,
       };
-
-    case ORDER_BY:
+    }
+    case ORDER_BY: {
       const orderRecipe = [...state.recipes];
       if (action.payload === "asc") {
         orderRecipe.sort((a, b) => a.name.localeCompare(b.name));
@@ -90,6 +91,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         recipes: orderRecipe,
       };
+    }
 
     case AWAIT_BY:
       return {

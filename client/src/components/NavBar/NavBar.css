@@ -3,7 +3,7 @@
   grid-template-columns: repeat(1, 1fr);
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .navBar {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -16,7 +16,7 @@
   text-align: center;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .contentNavBar {
     flex-direction: row;
     justify-content: space-between;
@@ -38,7 +38,7 @@
   text-decoration: none;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .navButton {
     color: rgba(44, 62, 80, 1);
     border: none;
