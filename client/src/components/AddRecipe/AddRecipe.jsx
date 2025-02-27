@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as actions from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -177,15 +177,13 @@ export default function AddRecipe() {
           3. In Health Score you can indicate the index by moving the bar that
           is there
         </p>
-        <p>4. Write the ingredient and press "add" to add it</p>
+        <p>{`4. Write the ingredient and press "add" to add it`}</p>
         <p>
-          5. If you do not want to add an ingredient, you can press the "Clean"
-          button
+          {`5. If you do not want to add an ingredient, you can press the "Clean" button`}
         </p>
         <p>6. The same of the ingredients applies to the instructions</p>
         <p>
-          7. Don't forget that you can only insert the image URL, there is no
-          support for local images
+          {`7. Don't forget that you can only insert the image URL, there is no support for local images`}
         </p>
       </div>
 

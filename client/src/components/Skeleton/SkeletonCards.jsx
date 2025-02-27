@@ -1,4 +1,3 @@
-import React from "react";
 import "./SkeletonCards.css";
 
 export default function SkeletonCards() {
